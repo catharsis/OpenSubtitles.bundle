@@ -152,7 +152,7 @@ def fetchSubtitles(proxy, token, part, imdbID=None, filename=None, season=None, 
 
       if len(subtitleResponse) == 0:
         Log('No valid subtitles. Skipping.')
-        return None
+        continue
 
       st = sorted(subtitleResponse, key=lambda k: int(k['SubDownloadsCnt']), reverse=True) # Sort by 'most downloaded' subtitle file for current language
 
